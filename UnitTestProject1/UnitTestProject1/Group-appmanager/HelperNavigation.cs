@@ -37,6 +37,21 @@ namespace WebAddressbookTests
         {
             driver.FindElement(By.LinkText("Logout")).Click();
         }
+
+        public void GoToCreationContact()
+        {
+            driver.FindElement(By.LinkText("add new")).Click();
+        }
+
+
+        public void ReturnToContacts()
+        {
+            driver.FindElement(By.LinkText("home page")).Click();
+        }
+
+
+      
+
     }
 }
 

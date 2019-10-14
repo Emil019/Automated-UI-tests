@@ -14,12 +14,25 @@ namespace WebAddressbookTests
         private string email = "";
         private string address = "";
 
+        //private string firstname;
+        //private string lastname;
+        //private string mobile;
+        //private string email;
+        //private string address;
+
         public ContactData(string name)
         {
             this.firstname = name;
         }
+        public ContactData(string firstname, string lastname, string mobile, string email, string address)
+        {
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.mobile = mobile;
+            this.email = email;
+            this.address = address;
+        }
 
-        
         public string Firstname
         {
             get

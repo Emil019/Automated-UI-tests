@@ -18,21 +18,24 @@ namespace WebAddressbookTests
 
         public HelperLogin loginHelper;
         public HelperNavigation navigator;
+
         public HelperGroup groupHelper;
 
-        //protected ApplicationManager app;
+      //  public HelperContact contactHelper;
+     
+      //protected ApplicationManager app;
 
-        [SetUp]
-        public void SetupTest()
-        {
-            driver = new FirefoxDriver();
-            baseURL = "http://localhost/addressbook/";
-            verificationErrors = new StringBuilder();
+    [SetUp]
+    public void SetupTest()
+    {
+        driver = new FirefoxDriver();
+        baseURL = "http://localhost/addressbook/";
+        verificationErrors = new StringBuilder();
 
-            loginHelper = new HelperLogin(driver);
-            navigator = new HelperNavigation(driver, baseURL);
-            groupHelper = new HelperGroup(driver);
-        }
+        loginHelper = new HelperLogin(driver);
+        navigator = new HelperNavigation(driver, baseURL);
+        groupHelper = new HelperGroup(driver);
+    }
 
         [TearDown]
         public void TeardownTest()
@@ -47,13 +50,13 @@ namespace WebAddressbookTests
             }
             Assert.AreEqual("", verificationErrors.ToString());
         }
-
-
-
-
-
-
-
-
     }
 }
+
+
+
+
+
+
+
+
