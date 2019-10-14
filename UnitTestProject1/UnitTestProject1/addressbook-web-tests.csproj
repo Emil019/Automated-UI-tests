@@ -58,6 +58,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Class2.cs" />
     <Compile Include="Group-appmanager\BaseHelper.cs" />
     <None Include="Group-appmanager\HelperContact.cs" />
     <Compile Include="Group-appmanager\HelperGroup.cs" />
