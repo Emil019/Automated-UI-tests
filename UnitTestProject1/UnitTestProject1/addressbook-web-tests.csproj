@@ -58,12 +58,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Group-appmanager\BaseHelper.cs" />
-    <None Include="Group-appmanager\HelperContact.cs" />
+    <Compile Include="Group-appmanager\HelperContact.cs" />
     <Compile Include="Group-appmanager\HelperGroup.cs" />
     <Compile Include="Group-appmanager\HelperLogin.cs" />
     <Compile Include="Group-appmanager\HelperNavigation.cs" />
-    <Compile Include="Contact-tests\CreationContacts.cs" />
     <None Include="Group-appmanager\ManagerApplication.cs" />
     <None Include="model\ContactData.cs" />
     <Compile Include="model\DataAccount.cs" />
@@ -76,7 +76,9 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Contact-tests\" />
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

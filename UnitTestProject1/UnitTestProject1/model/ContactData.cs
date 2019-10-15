@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WebAddressbookTests
-{//mkmkmkm
+{
     public class ContactData
     {
         private string firstname;
@@ -13,12 +13,6 @@ namespace WebAddressbookTests
         private string mobile = "";
         private string email = "";
         private string address = "";
-
-        //private string firstname;
-        //private string lastname;
-        //private string mobile;
-        //private string email;
-        //private string address;
 
         public ContactData(string name)
         {
