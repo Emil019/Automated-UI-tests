@@ -21,9 +21,10 @@ namespace WebAddressbookTests
 
         public HelperGroup groupHelper;
 
-      //  public HelperContact contactHelper;
+        public HelperContact contactHelper;
      
-      //protected ApplicationManager app;
+     
+
 
     [SetUp]
     public void SetupTest()
@@ -36,6 +37,7 @@ namespace WebAddressbookTests
         navigator = new HelperNavigation(driver, baseURL);
         groupHelper = new HelperGroup(driver);
     }
+
 
         [TearDown]
         public void TeardownTest()
@@ -50,6 +52,38 @@ namespace WebAddressbookTests
             }
             Assert.AreEqual("", verificationErrors.ToString());
         }
+
+
+
+
+        protected void GoToHomePage()
+        {
+            driver.Navigate().GoToUrl(baseURL);
+
+
+        }
+      
+
+
+        protected void CreationNewContact()
+        {
+            driver.FindElement(By.Name("firstname")).Clear();
+            driver.FindElement(By.Name("firstname")).SendKeys("q");
+            driver.FindElement(By.Name("lastname")).Clear();
+            driver.FindElement(By.Name("lastname")).SendKeys("q");
+            driver.FindElement(By.Name("company")).Clear();
+            driver.FindElement(By.Name("company")).SendKeys("Qwerty");
+            driver.FindElement(By.Name("mobile")).Clear();
+            driver.FindElement(By.Name("mobile")).SendKeys("1111111111");
+            driver.FindElement(By.Name("email")).Clear();
+            driver.FindElement(By.Name("email")).SendKeys("q@q.q");
+            driver.FindElement(By.Name("address2")).Clear();
+            driver.FindElement(By.Name("address2")).SendKeys("Qqqq 1");
+            driver.FindElement(By.XPath("(//input[@name='submit'])[2]")).Click();
+        }
+
+
+
     }
 }
 

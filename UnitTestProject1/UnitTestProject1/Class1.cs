@@ -1,13 +1,71 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using System.Threading;
+using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
 
-namespace UnitTestProject1
+namespace WebAddressbookTests
 {
-   public struct qwer
+    [TestFixture]
+    public class CreationContacts : BaseTest
     {
-        string _a;
+        [Test]
+        public void CreationContact()
+        {
+            GoToHomePage();
+
+            loginHelper.Login(new AccountData("admin", "secret"));
+
+            contactHelper.CreationNewContact();
+        }
     }
 }
+            
+
+
+       
+            
+            
+            
+        
+
+
+
+       
+        
+
+     
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+            
+           
+
