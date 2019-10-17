@@ -13,38 +13,46 @@ namespace WebAddressbookTests
     {
 
 
-        public HelperGroup(IWebDriver driver)
-            : base(driver)
+        public HelperGroup(IWebDriver driver) : base(driver)
         {
-
         }
-        public void CreationNewGroup(GroupData group)
+
+        public HelperGroup InitGroupCreation()
         {
             driver.FindElement(By.Name("new")).Click();
-
+            return this;
+        }
+        public HelperGroup FillGroupForm(GroupData group)
+        {
             driver.FindElement(By.Name("group_name")).Clear();
             driver.FindElement(By.Name("group_name")).SendKeys(group.Name);
-
             driver.FindElement(By.Name("group_header")).Clear();
             driver.FindElement(By.Name("group_header")).SendKeys(group.Header);
-
             driver.FindElement(By.Name("group_footer")).Clear();
             driver.FindElement(By.Name("group_footer")).SendKeys(group.Footer);
-
-            driver.FindElement(By.Name("submit")).Click();
+            return this;
         }
-        public void ReturnToGroups()
+        public HelperGroup SubmitGroupCreation()
+        {
+            driver.FindElement(By.Name("submit")).Click();
+            return this;
+        }
+        public HelperGroup ReturnToGroups()
         {
             driver.FindElement(By.LinkText("group page")).Click();
-
+            return this;
         }
-        public void SelectGroup()
+        public HelperGroup SelectGroup()
         {
             driver.FindElement(By.Name("selected[]")).Click();
+            return this;
         }
-        public void RemoveGroup()
+        public HelperGroup RemoveGroup()
         {
             driver.FindElement(By.XPath("(//input[@name='delete'])")).Click();
+            return this;
         }
     }
 }
+
+

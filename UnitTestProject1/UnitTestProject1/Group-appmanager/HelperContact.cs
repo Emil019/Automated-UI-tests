@@ -19,6 +19,8 @@ namespace WebAddressbookTests
 
         public void CreationNewContact()
         {
+            
+
             driver.FindElement(By.Name("firstname")).Clear();
             driver.FindElement(By.Name("firstname")).SendKeys("q");
             driver.FindElement(By.Name("lastname")).Clear();
