@@ -15,6 +15,7 @@ namespace WebAddressbookTests
         public void CreationGroup()
         {
             app.Auth.Login(new AccountData("admin", "secret"));
+            app.Navigator.GoToGroups();
 
             GroupData group = new GroupData("aaa");
             group.Header = "bbb";
@@ -30,9 +31,3 @@ namespace WebAddressbookTests
         }
     }
 }
-             
-
-           
-
-
-

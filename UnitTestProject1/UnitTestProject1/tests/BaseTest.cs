@@ -16,10 +16,7 @@ namespace WebAddressbookTests
         public void SetupTest()
         {
             app = new ApplicationManager();
-
             app.Navigator.GoToHome();
-            app.Navigator.GoToGroups();  
-
         }
 
         [TearDown]
@@ -29,21 +26,4 @@ namespace WebAddressbookTests
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-       
       
-
-
-     
-
-
